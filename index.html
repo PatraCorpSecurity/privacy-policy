@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patra URL Monitor - Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    h2 { font-size: 1.15rem; margin-top: 1.5rem; }
+    .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.35rem; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #ddd; color: #666; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <h1>Patra URL Monitor &mdash; Privacy Policy</h1>
+  <p class="subtitle">Last updated: April 29, 2026</p>
+
+  <h2>Overview</h2>
+  <p>
+    Patra URL Monitor is a browser extension deployed by organizations as part of the
+    Patra Endpoint Monitor platform. It is designed for enterprise endpoint security
+    and is installed on devices managed by the organization.
+  </p>
+
+  <h2>Data Collected</h2>
+  <p>The extension collects the following data from the browser it is installed in:</p>
+  <ul>
+    <li><strong>Page URLs</strong> &mdash; full URLs of pages visited (including query parameters)</li>
+    <li><strong>Page titles</strong> &mdash; the title of each visited page</li>
+    <li><strong>Tab activity</strong> &mdash; tab open, close, switch, and audio playback events</li>
+    <li><strong>Browser type</strong> &mdash; which browser the extension is running in (e.g. Chrome, Edge, Brave)</li>
+  </ul>
+  <p>
+    The extension does <strong>not</strong> collect passwords, form inputs, file contents,
+    cookies, browsing history beyond the active session, or any data from browser
+    internal pages (chrome://, edge://, about:, etc.).
+  </p>
+
+  <h2>How Data Is Transmitted</h2>
+  <p>
+    All collected data is sent exclusively to a local agent process running on the
+    same machine via <code>http://127.0.0.1</code>. No data is transmitted directly
+    to external servers, third-party services, or the internet by the extension itself.
+  </p>
+
+  <h2>How Data Is Used</h2>
+  <p>
+    The local agent forwards collected data to the organization's self-hosted
+    Patra Monitor server for the following purposes:
+  </p>
+  <ul>
+    <li>URL filtering and policy enforcement (blocking access to restricted sites)</li>
+    <li>Security monitoring and threat detection</li>
+    <li>Compliance reporting</li>
+  </ul>
+
+  <h2>Data Storage and Retention</h2>
+  <p>
+    Data retention periods are determined by the organization that deploys Patra
+    Monitor. The extension itself does not persist any data locally beyond
+    short-lived in-memory caches used for deduplication (cleared every 60 seconds).
+  </p>
+
+  <h2>Data Sharing</h2>
+  <p>
+    Data is accessible only to authorized administrators within the deploying
+    organization. It is not sold, shared with, or disclosed to any third party.
+  </p>
+
+  <h2>User Control</h2>
+  <p>
+    This extension is deployed and managed by the organization as part of its
+    endpoint security program. Questions about data collection scope, retention,
+    or access should be directed to the organization's IT or security team.
+  </p>
+
+  <h2>Chrome Web Store Limited Use Disclosure</h2>
+  <p>
+    The Patra URL Monitor extension's use and transfer of information received from
+    Google APIs to any other app adheres to the
+    <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/"
+       target="_blank" rel="noopener">Chrome Web Store API Services User Data Policy</a>,
+    including the Limited Use requirements.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    For questions regarding this privacy policy, contact the Patra Monitor development
+    team at the email address listed on the Chrome Web Store developer profile.
+  </p>
+
+  <div class="footer">
+    &copy; 2026 Patra Monitor
+  </div>
+</body>
+</html>
