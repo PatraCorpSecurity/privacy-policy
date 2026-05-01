@@ -14,7 +14,7 @@
       line-height: 1.6;
     }
     h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
-    h2 { font-size: 1.15rem; margin-top: 1.5rem; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.3rem; }
     .subtitle { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
     ul { padding-left: 1.25rem; }
     li { margin-bottom: 0.35rem; }
@@ -23,84 +23,197 @@
 </head>
 <body>
   <h1>Patra URL Monitor &mdash; Privacy Policy</h1>
-  <p class="subtitle">Last updated: April 29, 2026</p>
+  <p class="subtitle">Effective date: April 30, 2026 &nbsp;|&nbsp; Last updated: April 30, 2026</p>
 
-  <h2>Overview</h2>
+  <h2>1. Introduction</h2>
   <p>
-    Patra URL Monitor is a browser extension deployed by organizations as part of the
-    Patra Endpoint Monitor platform. It is designed for enterprise endpoint security
-    and is installed on devices managed by the organization.
+    Patra URL Monitor (&ldquo;the Extension&rdquo;) is a browser extension developed
+    and published by Patra Corp (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;).
+    It is a component of the Patra Endpoint Monitor platform, an internal enterprise
+    security tool used exclusively within Patra Corp. The Extension is not sold to or
+    intended for use by the general public. It is deployed only on systems owned and
+    operated by Patra Corp.
+  </p>
+  <p>
+    This Privacy Policy describes what data the Extension collects, how that data is
+    handled and stored, and with whom it is shared. By using a Patra Corp&ndash;managed
+    device on which the Extension is installed, you acknowledge these practices.
   </p>
 
-  <h2>Data Collected</h2>
-  <p>The extension collects the following data from the browser it is installed in:</p>
+  <h2>2. Data Collection</h2>
+  <p>The Extension collects the following categories of data from the browser:</p>
   <ul>
-    <li><strong>Page URLs</strong> &mdash; full URLs of pages visited (including query parameters)</li>
-    <li><strong>Page titles</strong> &mdash; the title of each visited page</li>
-    <li><strong>Tab activity</strong> &mdash; tab open, close, switch, and audio playback events</li>
-    <li><strong>Browser type</strong> &mdash; which browser the extension is running in (e.g. Chrome, Edge, Brave)</li>
+    <li><strong>Page URLs</strong> &mdash; the full URL (including domain, path, and query
+        parameters) of web pages visited in the browser.</li>
+    <li><strong>Page titles</strong> &mdash; the document title of each visited page.</li>
+    <li><strong>Tab lifecycle events</strong> &mdash; events indicating when a tab is opened,
+        closed, activated, deactivated, navigated, or changes audio playback state.</li>
+    <li><strong>Browser type</strong> &mdash; the name of the browser in which the Extension
+        is running (e.g., Chrome, Edge, Brave, Opera, Vivaldi).</li>
+    <li><strong>Tab metadata</strong> &mdash; numeric tab and window identifiers, active/inactive
+        state, and audible state. These are transient session identifiers, not persistent
+        user identifiers.</li>
+    <li><strong>Timestamps</strong> &mdash; the date and time at which each event occurs.</li>
+  </ul>
+  <p>The Extension does <strong>not</strong> collect:</p>
+  <ul>
+    <li>Passwords, form inputs, or autofill data</li>
+    <li>File contents, downloads, or upload data</li>
+    <li>Cookies, authentication tokens, or session data</li>
+    <li>Personal identity information such as names, email addresses, or phone numbers</li>
+    <li>Browsing history beyond the active session</li>
+    <li>Data from internal browser pages (chrome://, edge://, about:, devtools://, etc.)</li>
+    <li>Keystroke or mouse input data</li>
+  </ul>
+
+  <h2>3. Data Handling</h2>
+  <p>
+    All data collected by the Extension is transmitted exclusively to a local agent
+    process (the Patra Endpoint Monitor Agent) running on the same machine. Communication
+    occurs over <code>http://127.0.0.1:18599</code> (localhost only). The Extension does
+    not transmit any data directly to external servers, remote endpoints, the internet,
+    or any third-party service.
+  </p>
+  <p>
+    The local agent process is responsible for forwarding the data to Patra Corp&rsquo;s
+    self-hosted Patra Monitor server over an encrypted (HTTPS/TLS) connection. The
+    Extension itself does not control or manage this onward transmission.
+  </p>
+  <p>
+    Within the Extension, data is held only in short-lived in-memory caches used for
+    deduplication and debouncing of duplicate events. These caches are automatically
+    cleared every 60&nbsp;seconds and do not survive browser restarts. The Extension
+    does not write data to the browser&rsquo;s local storage, IndexedDB, cookies,
+    or any other persistent storage mechanism.
+  </p>
+
+  <h2>4. Purpose of Data Use</h2>
+  <p>
+    The data collected by the Extension is used solely for the following internal
+    Patra Corp purposes:
+  </p>
+  <ul>
+    <li><strong>URL filtering and policy enforcement</strong> &mdash; blocking or redirecting
+        access to websites that violate organizational security or acceptable-use policies.</li>
+    <li><strong>Security monitoring and threat detection</strong> &mdash; identifying potentially
+        malicious, phishing, or unauthorized websites accessed from company endpoints.</li>
+    <li><strong>Compliance reporting</strong> &mdash; generating audit logs and reports for
+        internal compliance and governance requirements.</li>
+    <li><strong>Operational analytics</strong> &mdash; aggregated, non-personally-identifiable
+        analysis of browsing patterns to improve security policies.</li>
   </ul>
   <p>
-    The extension does <strong>not</strong> collect passwords, form inputs, file contents,
-    cookies, browsing history beyond the active session, or any data from browser
-    internal pages (chrome://, edge://, about:, etc.).
+    The data is <strong>never</strong> used for advertising, marketing, user profiling
+    for commercial purposes, sale to third parties, credit assessment, or any purpose
+    unrelated to Patra Corp&rsquo;s internal security operations.
   </p>
 
-  <h2>How Data Is Transmitted</h2>
+  <h2>5. Data Storage</h2>
   <p>
-    All collected data is sent exclusively to a local agent process running on the
-    same machine via <code>http://127.0.0.1</code>. No data is transmitted directly
-    to external servers, third-party services, or the internet by the extension itself.
+    The Extension itself does not store any data persistently. All in-memory caches
+    are ephemeral and cleared automatically as described in Section&nbsp;3.
   </p>
-
-  <h2>How Data Is Used</h2>
   <p>
-    The local agent forwards collected data to the organization's self-hosted
-    Patra Monitor server for the following purposes:
+    Data forwarded by the local agent to the Patra Monitor server is stored on
+    Patra Corp&rsquo;s self-hosted infrastructure. Storage practices include:
   </p>
   <ul>
-    <li>URL filtering and policy enforcement (blocking access to restricted sites)</li>
-    <li>Security monitoring and threat detection</li>
-    <li>Compliance reporting</li>
+    <li><strong>Encryption at rest</strong> &mdash; data is stored using industry-standard
+        encryption (AES-256).</li>
+    <li><strong>Encryption in transit</strong> &mdash; data transmitted from the agent to
+        the server uses TLS/HTTPS.</li>
+    <li><strong>Access controls</strong> &mdash; server access is restricted to authorized
+        Patra Corp security administrators via role-based access controls and session
+        authentication.</li>
+    <li><strong>Retention period</strong> &mdash; collected data is retained in accordance
+        with Patra Corp&rsquo;s internal data retention policies. Default retention is
+        90&nbsp;days, after which data is automatically purged. Retention periods may be
+        adjusted by Patra Corp administrators based on organizational requirements.</li>
   </ul>
 
-  <h2>Data Storage and Retention</h2>
+  <h2>6. Data Sharing</h2>
   <p>
-    Data retention periods are determined by the organization that deploys Patra
-    Monitor. The extension itself does not persist any data locally beyond
-    short-lived in-memory caches used for deduplication (cleared every 60 seconds).
+    Data collected by the Extension is <strong>not</strong> shared with, sold to,
+    transferred to, or disclosed to any third party, including but not limited to:
   </p>
-
-  <h2>Data Sharing</h2>
+  <ul>
+    <li>Advertising networks or platforms</li>
+    <li>Data brokers or information resellers</li>
+    <li>Analytics providers</li>
+    <li>Any external organization, entity, or individual outside of Patra Corp</li>
+  </ul>
   <p>
-    Data is accessible only to authorized administrators within the deploying
-    organization. It is not sold, shared with, or disclosed to any third party.
+    Data is accessible only to authorized Patra Corp administrators who require
+    access for the security and compliance purposes described in Section&nbsp;4.
   </p>
-
-  <h2>User Control</h2>
   <p>
-    This extension is deployed and managed by the organization as part of its
-    endpoint security program. Questions about data collection scope, retention,
-    or access should be directed to the organization's IT or security team.
+    Data may be disclosed only in the following limited circumstances:
   </p>
+  <ul>
+    <li>When required by applicable law, regulation, or valid legal process</li>
+    <li>To protect the security and integrity of Patra Corp systems (e.g., incident response)</li>
+  </ul>
 
-  <h2>Chrome Web Store Limited Use Disclosure</h2>
+  <h2>7. User Rights and Control</h2>
   <p>
-    The Patra URL Monitor extension's use and transfer of information received from
-    Google APIs to any other app adheres to the
+    The Extension is deployed and managed by Patra Corp as part of its internal
+    endpoint security program. It is installed on company-owned devices and operates
+    under organizational IT policies.
+  </p>
+  <p>
+    Patra Corp employees may:
+  </p>
+  <ul>
+    <li>Contact the Patra Corp IT or Security team to request information about what
+        data has been collected from their assigned endpoint.</li>
+    <li>Request correction or deletion of data in accordance with applicable internal
+        policies and legal requirements.</li>
+    <li>Direct questions about the scope, purpose, or duration of data collection to
+        their manager or the IT Security department.</li>
+  </ul>
+
+  <h2>8. Chrome Web Store User Data Policy Compliance</h2>
+  <p>
+    The Patra URL Monitor extension&rsquo;s use and transfer of information received
+    from Google APIs adheres to the
     <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use/"
-       target="_blank" rel="noopener">Chrome Web Store API Services User Data Policy</a>,
-    including the Limited Use requirements.
+       target="_blank" rel="noopener">Chrome Web Store User Data Policy</a>,
+    including the Limited Use requirements. Specifically:
+  </p>
+  <ul>
+    <li>Data use is limited to providing and improving the Extension&rsquo;s single
+        stated purpose: URL monitoring and filtering for enterprise endpoint security.</li>
+    <li>Data is not transferred to third parties except as required for the Extension&rsquo;s
+        core functionality, for legal compliance, or for security purposes (malware and
+        fraud prevention).</li>
+    <li>Data is not used for serving advertisements or for purposes unrelated to the
+        Extension&rsquo;s core functionality.</li>
+    <li>Human access to raw user data is limited to authorized Patra Corp security
+        administrators for security investigations, legal compliance, or when aggregated
+        and anonymized for internal operational analysis.</li>
+  </ul>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>
+    We may update this Privacy Policy from time to time to reflect changes in our
+    practices or for legal, operational, or regulatory reasons. When we make changes,
+    we will update the &ldquo;Last updated&rdquo; date at the top of this page.
+    Continued use of Patra Corp devices on which the Extension is deployed constitutes
+    acceptance of the updated policy.
   </p>
 
-  <h2>Contact</h2>
+  <h2>10. Contact Information</h2>
   <p>
-    For questions regarding this privacy policy, contact the Patra Monitor development
-    team at the email address listed on the Chrome Web Store developer profile.
+    For questions, concerns, or requests regarding this Privacy Policy or the data
+    practices of the Patra URL Monitor extension, please contact:
+  </p>
+  <p>
+    <strong>Patra Corp &mdash; IT Security Department</strong><br>
+    Email: <a href="mailto:security@patracorp.com">security@patracorp.com</a>
   </p>
 
   <div class="footer">
-    &copy; 2026 Patra Monitor
+    &copy; 2026 Patra Corp. All rights reserved.
   </div>
 </body>
 </html>
